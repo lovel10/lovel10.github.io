@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>4.2</title>
+</head>
+<body>
+<script>
+"use strict";
+ let book = { 
+  //набор свойств
+  name: "Книга 1",
+  author: "цена",
+
+ //вложкнный набор свойств
+  otherinfo:
+    {
+    price: 100,
+    pagescount: 90,
+    },
+ 
+    //функция
+    myshow: function(title)
+    {
+      alert(title+' ' + this.name+' ' + this.otherinfo.price);
+    }
+};
+
+  //вызов фукции у обьекта 
+  book.myshow('hi');
+  
+  function isEmpty(obj){
+    let counter = 0;
+    for (let key in obj){
+      counter++;
+    }
+    if (counter == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  } 
+
+</script>
+</body>
+</html>
